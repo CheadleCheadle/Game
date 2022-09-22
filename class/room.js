@@ -1,3 +1,4 @@
+
 class Room {
 
     constructor(name, description) {
@@ -25,7 +26,7 @@ class Room {
         return Object.keys(this.exits);
     }
 
-    getExitsString() {
+    getExitsString() {  
         return `Exits: ${this.getExits().join(", ")}`
     }
 
@@ -44,11 +45,18 @@ class Room {
     }
 
     getItemByName(name) {
-
-        // Fill this in
+       
+        for (let i = 0; i < this.items.length; i++) {
+            let item = this.items[i].name;
+            if (name === item) {
+                return this.items[i];
+            }
+        }
+        }
+        
     }
 
-}
+
 
 module.exports = {
   Room,

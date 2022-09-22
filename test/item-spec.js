@@ -150,7 +150,7 @@ describe ('Food', function () {
     let world = new World();
     world.loadWorld(worldData);
 
-    room = world.rooms[2];
+     room = world.rooms[2];
     roomItems = room.items;
     expect(roomItems[0].name).to.equal('sandwich')
   });
